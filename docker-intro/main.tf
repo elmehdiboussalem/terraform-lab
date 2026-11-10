@@ -23,4 +23,5 @@ resource "docker_container" "web" {
     internal = 80
     external = var.host_port
   }
+  restart = "unless-stopped"
 }
