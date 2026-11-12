@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "docker" {
-  host = "ssh://mehdi@192.168.100.21:22"
+  host = "ssh://mehdi@${var.docker_host_ip}"
 }
 
 resource "docker_image" "nginx" {
